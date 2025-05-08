@@ -1,5 +1,9 @@
 {
     "project": "Projectes",
     "contact": "Contacte",
-    "about": "Nosaltres"
+    "about": "Nosaltres",
+    "footer": {
+        "madeby": "Web feta per ",
+        "rights": "Tots els drets reservats."
+    }
 }

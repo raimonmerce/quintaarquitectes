@@ -1,5 +1,9 @@
 {
     "project": "Projects",
     "contact": "Contact",
-    "about": "About us"
+    "about": "About us",
+    "footer": {
+        "madeby": "Website made by ",
+        "rights": "All rights reserved."
+    }
 }

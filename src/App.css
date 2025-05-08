@@ -57,7 +57,7 @@ h3 {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background: green;
+    background: url('/png/background.png') center center / cover no-repeat;
     overflow: hidden;
     transition: opacity 2.5s ease;
     opacity: 1;

@@ -1,11 +1,15 @@
-type FooterProps = {
-    
-}
+import { useTranslation } from 'react-i18next';
+import "./Footer.css"
 
-export default function Footer({}:FooterProps) {
+export default function Footer() {
+    const { t } = useTranslation();
     return (
-        <>
-            <p>Footer</p>
-        </>
+        <div className="footer-container">
+            &copy; {new Date().getFullYear()} Quinta Arquitectes. {t("footer.rights")}, {t("footer.madeby")}
+            &nbsp;
+            <a href="https://www.raimonmerce.com/" target="_blank" rel="noopener noreferrer">
+                Ray
+            </a>
+        </div>
     )
 }

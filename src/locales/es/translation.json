@@ -1,5 +1,10 @@
 {
     "project": "Proyectos",
     "contact": "Contacto",
-    "about": "Nosaltros"
+    "about": "Nosaltros",
+    "footer": {
+        "madeby": "Web hecha por",
+        "rights": "Todos los derechos reservados."
+    }
+
 }
