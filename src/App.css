@@ -1,0 +1,93 @@
+:root {
+    --color-primary: red;
+    --color-secondary: blue;
+    --color-text: #1C1C1C;
+    --color-background: #F4F1EE;
+    
+    --font-size-s: 0.618em;
+    --font-size-m: 1em;
+    --font-size-l: 1.618em;
+    --font-size-xl: 2.618em;
+    --font-size-xll: 4.236em; 
+}
+
+h1 {
+    font-size: var(--font-size-xll);
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: var(--font-size-l);
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 0.5em;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1em;
+}
+
+.landing-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    transition: all 2.5s ease;
+}
+
+.landing-backgrounds {
+    z-index: 500;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: green;
+    overflow: hidden;
+    transition: opacity 2.5s ease;
+    opacity: 1;
+}
+
+.landing-container .landing-logo,
+.landing-container p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 2.5s ease;
+}
+
+.landing-logo {
+    z-index: 1000;
+    height: 12em;
+}
+
+.landing-backgrounds.move-image{
+    opacity: 0.0;
+}
+
+.landing-container.move-image .landing-logo {
+    position: absolute;
+    top: calc(-4em + 8px);
+    left: calc(-9.7em + 16px);
+    transform: scale(0.25) translate(0, 0);
+}
+
+.landing-container.move-image p {
+    display: none;
+}

@@ -1,9 +1,5 @@
 
-type AboutProps = {
-    
-}
-
-export default function About({}:AboutProps) {
+export default function About() {
     return (
         <>
             <p>About</p>

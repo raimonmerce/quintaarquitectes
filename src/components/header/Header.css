@@ -1,0 +1,54 @@
+button {
+    border: none;
+    background-color: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: var(--font-size-l);
+}
+
+button:hover {
+    color: var(--color-primary); /* or any hover color you want */
+}
+
+button:focus {
+    outline: none;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+    height: 3em;
+    object-fit: contain;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.language-selector {
+    background-color: transparent;
+    color: var(--color-text);
+    font-size: var(--font-size-l);
+    border: none;
+}
+
+.language-selector:focus {
+    outline: none;
+}
+
+
+.language-options {
+}

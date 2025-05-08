@@ -1,25 +1,27 @@
 import Header from "./header/Header"
 import Footer from "./footer/Footer"
 import About from "./content/About"
+import Landing from "./content/Landing"
 import Contact from "./content/Contact"
 import Projects from "./content/Projects"
 import useStore from '../store';
 
-type MainProps = {
-    
-}
-
-export default function Main({}:MainProps) {
-    const { page } = useStore();
+export default function Main() {
+    const { page, landingVisible } = useStore();
     return (
-        <>
-            <Header/>
-            <div>
-                {page == "project" && <Projects/>}
-                {page == "contact" && <Contact/>}
-                {page == "about" && <About/>}
-            </div>
-            <Footer/>
-        </>
+        <div className="layout">
+            <>
+                {landingVisible &&
+                    <Landing/> 
+                }
+                <Header/>
+                <div className="main-content">
+                    {page === "project" && <Projects/>}
+                    {page === "contact" && <Contact/>}
+                    {page === "about" && <About/>}
+                </div>
+                <Footer/>
+            </>
+        </div>
     )
 }

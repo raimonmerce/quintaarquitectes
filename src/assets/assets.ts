@@ -1,9 +1,13 @@
 import logo from './png/logo.png'
 import quinta from './png/quinta.png'
+import background from './png/background.png'
 
-export const photos = {
+const assets = {
     png: {
         logo: logo,
-        quinta: quinta
+        quinta: quinta,
+        background: background
     }
 }
+
+export default assets
