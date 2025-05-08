@@ -5,7 +5,7 @@ export default function Footer() {
     const { t } = useTranslation();
     return (
         <div className="footer-container">
-            &copy; {new Date().getFullYear()} Quinta Arquitectes. {t("footer.rights")}, {t("footer.madeby")}
+            &copy; {new Date().getFullYear()} Quinta Arquitectes. {t("footer.rights")} {t("footer.madeby")}
             &nbsp;
             <a href="https://www.raimonmerce.com/" target="_blank" rel="noopener noreferrer">
                 Ray
