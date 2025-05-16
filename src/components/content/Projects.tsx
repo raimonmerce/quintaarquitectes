@@ -13,7 +13,7 @@ export default function Projects() {
                         const projectItem = projectManager.getById(item);
                         if (!projectItem) return;
                         return (
-                            <ProjectThumbnail key={num} id={item} />
+                            <ProjectThumbnail key={num} project={projectItem} />
                         )
                     })
                 })()}

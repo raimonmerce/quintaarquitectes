@@ -1,16 +1,13 @@
-import { ProjectManager } from "../../data/ProjectManager"
 import type { Project } from "../../types";
 import { useNavigate } from 'react-router-dom';
 import useStore from '../../store';
 
 type ProjectThumbnailProps = {
-    id: string
+    project: Project
 }
 
-export default function ProjectThumbnail({id}: ProjectThumbnailProps) {
+export default function ProjectThumbnail({project}: ProjectThumbnailProps) {
     const { setPage, setProject } = useStore();
-    const projectManager = ProjectManager.getInstance();
-    const project = projectManager.getById(id);
     const navigate = useNavigate();
     if (!project) return;
 

@@ -4,6 +4,7 @@ import About from "./content/About"
 import Landing from "./content/Landing"
 import Contact from "./content/Contact"
 import Projects from "./content/Projects"
+import Project from "./common/Project"
 import useStore from '../store';
 import { fadeDuration } from "../constant"
 import type { PageType } from "../types"
@@ -41,7 +42,7 @@ export default function Main() {
                     {displayedPage === "project" && <Projects/>}
                     {displayedPage === "contact" && <Contact/>}
                     {displayedPage === "about" && <About/>}
-                    {displayedPage === "none" && <div>{project}</div>}
+                    {displayedPage === "none" && project && <Project id={project}/>}
                 </div>
                 <Footer/>
             </>

@@ -24,9 +24,8 @@ export default function Header() {
             setPage("project");
             setProject(null);
         } else if (segments[1] === "projects" && segments.length > 2) {
-            // e.g. /quintaarquitectes/projects/urquinaona
             setPage("none");
-            setProject(segments[2]); // 'urquinaona'
+            setProject(segments[2]);
         } else {
             setPage("none");
             setProject(null);
