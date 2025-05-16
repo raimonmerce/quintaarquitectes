@@ -4,25 +4,34 @@ import LanguageSelector from './LanguageSelector';
 import assets from "../../assets/assets"
 import { useLocation , Link } from 'react-router-dom';
 import './Header.css';
-import {useEffect} from "react"
+import { useEffect } from "react"
 
 export default function Header() {
-    const { page, setPage, landingVisible } = useStore();
+    const { page, setPage, setProject, landingVisible } = useStore();
     const { t } = useTranslation();
     const location = useLocation();
 
     useEffect(() => {
         const path = location.pathname.toLowerCase();
-        console.log("path", path, location);
-
-        if (path.includes("contact")) {
+        const segments = path.split('/').filter(Boolean); // removes empty strings
+        if (path.includes("/contact")) {
             setPage("contact");
-        } else if (path.includes("about")) {
+            setProject(null);
+        } else if (path.includes("/about")) {
             setPage("about");
-        } else if (path.includes("project")) {
+            setProject(null);
+        } else if (path === "/quintaarquitectes/projects") {
             setPage("project");
+            setProject(null);
+        } else if (segments[1] === "projects" && segments.length > 2) {
+            // e.g. /quintaarquitectes/projects/urquinaona
+            setPage("none");
+            setProject(segments[2]); // 'urquinaona'
+        } else {
+            setPage("none");
+            setProject(null);
         }
-    }, [location.pathname, setPage]);
+    }, [location.pathname, setPage, setProject]);
 
     return (
         <div className="header">

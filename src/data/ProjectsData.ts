@@ -4,6 +4,7 @@ import assets from '../assets/assets';
 const projects: { [id: string]: Project } = {
     //Accions
     "urquinaona": {
+        key: "urquinaona",
         name: "Projecte Urquinaona",
         description: "assets.description.accions.cccp",
         thumbnail: assets.png.projects.urquinaona.urquinaona1,
@@ -20,6 +21,7 @@ const projects: { [id: string]: Project } = {
         state: 'Done'
     },
     "urquinaona2": {
+        key: "urquinaona2",
         name: "Projecte Urquinaona",
         description: "assets.description.accions.cccp",
         thumbnail: assets.png.projects.urquinaona.urquinaona1,
@@ -36,6 +38,7 @@ const projects: { [id: string]: Project } = {
         state: 'Done'
     },
     "urquinaona3": {
+        key: "urquinaona3",
         name: "Projecte Urquinaona",
         description: "assets.description.accions.cccp",
         thumbnail: assets.png.projects.urquinaona.urquinaona1,
@@ -52,6 +55,7 @@ const projects: { [id: string]: Project } = {
         state: 'Done'
     },
     "urquinaona4": {
+        key: "urquinaona4",
         name: "Projecte Urquinaona",
         description: "assets.description.accions.cccp",
         thumbnail: assets.png.projects.urquinaona.urquinaona1,
@@ -68,6 +72,7 @@ const projects: { [id: string]: Project } = {
         state: 'Done'
     },
     "urquinaona5": {
+        key: "urquinaona5",
         name: "Projecte Urquinaona",
         description: "assets.description.accions.cccp",
         thumbnail: assets.png.projects.urquinaona.urquinaona1,
@@ -84,6 +89,7 @@ const projects: { [id: string]: Project } = {
         state: 'Done'
     },
     "urquinaona6": {
+        key: "urquinaona6",
         name: "Projecte Urquinaona",
         description: "assets.description.accions.cccp",
         thumbnail: assets.png.projects.urquinaona.urquinaona1,

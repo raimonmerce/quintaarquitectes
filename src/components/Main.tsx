@@ -12,7 +12,7 @@ import { useState, useEffect } from 'react';
 export default function Main() {
     const [displayedPage, setDisplayedPage] = useState<PageType | null>();
     const [contentVisible, setContentVisible] = useState<boolean>(false);
-    const { page, landingVisible } = useStore();
+    const { page, project, landingVisible } = useStore();
 
     useEffect(() => {
         setContentVisible(true)
@@ -41,6 +41,7 @@ export default function Main() {
                     {displayedPage === "project" && <Projects/>}
                     {displayedPage === "contact" && <Contact/>}
                     {displayedPage === "about" && <About/>}
+                    {displayedPage === "none" && <div>{project}</div>}
                 </div>
                 <Footer/>
             </>
