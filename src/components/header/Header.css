@@ -1,4 +1,4 @@
-button {
+.nav-button {
     border: none;
     background-color: transparent;
     color: var(--color-text);
@@ -7,12 +7,17 @@ button {
     font-size: var(--font-size-l);
 }
 
-button:hover {
-    color: var(--color-primary); /* or any hover color you want */
+.nav-button:hover {
+    color: var(--color-hover);
 }
 
-button:focus {
+.nav-button:focus {
     outline: none;
+}
+
+.nav-button.selected {
+    color: var(--color-text);
+    font-weight: bold;
 }
 
 .header {
@@ -23,7 +28,7 @@ button:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5em 1em;
+    padding: 1em 1em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -39,16 +44,23 @@ button:focus {
 }
 
 .language-selector {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; 
     background-color: transparent;
     color: var(--color-text);
     font-size: var(--font-size-l);
     border: none;
+    transition: color 0.3s ease;
+}
+
+.language-selector:hover {
+    color: var(--color-hover);
 }
 
 .language-selector:focus {
     outline: none;
 }
 
-
-.language-options {
+.language-selector option {
+    background-color: var(--color-background);
+    color: var(--color-text);
 }

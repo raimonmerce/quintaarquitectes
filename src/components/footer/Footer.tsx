@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-container">
             &copy; {new Date().getFullYear()} Quinta Arquitectes. {t("footer.rights")} {t("footer.madeby")}
             &nbsp;
-            <a href="https://www.raimonmerce.com/" target="_blank" rel="noopener noreferrer">
+            <a className="footer-link" href="https://www.raimonmerce.com/" target="_blank" rel="noopener noreferrer">
                 Ray
             </a>
         </div>

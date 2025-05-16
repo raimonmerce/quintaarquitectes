@@ -3,12 +3,27 @@
     --color-secondary: blue;
     --color-text: #1C1C1C;
     --color-background: #F4F1EE;
+    --color-hover: #949494;
     
     --font-size-s: 0.618em;
     --font-size-m: 1em;
     --font-size-l: 1.618em;
     --font-size-xl: 2.618em;
-    --font-size-xll: 4.236em; 
+    --font-size-xll: 4.236em;
+
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 h1 {
@@ -42,6 +57,12 @@ h3 {
 .main-content {
     flex: 1;
     padding: 1em;
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.main-content.visible {
+    opacity: 1;
 }
 
 .landing-container {

@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import useStore from '../../store';
 import assets from "../../assets/assets"
+import { useNavigate } from 'react-router-dom';
 
 export default function Landing() {
     const { setLandingVisible } = useStore();
     const [isClicked, setIsClicked] = useState(false);
+    const navigate = useNavigate();
 
     const handleOnClick = () => {
         setIsClicked(true);
-
+        navigate('/quintaarquitectes/projects');
         setTimeout(() => {
             setLandingVisible(false);
         }, 2500);

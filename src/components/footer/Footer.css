@@ -5,6 +5,13 @@ a {
 .footer-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;  
+}
+
+.footer-link {
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--color-hover)
 }

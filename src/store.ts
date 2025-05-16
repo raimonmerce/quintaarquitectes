@@ -1,10 +1,8 @@
 import { create } from 'zustand'
-
-type Page = 'project' | 'contact' | 'about';
-
+import type { PageType } from './types';
 interface Store {
-  page: Page;
-  setPage: (page: Page) => void;
+  page: PageType;
+  setPage: (page: PageType) => void;
   landingVisible: boolean;
   setLandingVisible: (landingVisible: boolean) => void;
 }
