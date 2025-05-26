@@ -25,7 +25,7 @@ export default function ProjectThumbnail({project}: ProjectThumbnailProps) {
             className="container"
             onClick={() => handleClick(project)}
             style={{ backgroundImage: `url(${project.thumbnail})` }}
-            onMouseEnter={() => {console.log("AA"); setIsHover(true)}}
+            onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
         >
             <div className="filter"/>

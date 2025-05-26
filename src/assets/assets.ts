@@ -1,6 +1,9 @@
 import logo from './png/logo.png'
 import quinta from './png/quinta.png'
-import background from './png/background.png'
+import background1 from './png/background.png'
+import background2 from './png/projects/urquinaona1.jpg'
+import background3 from './png/projects/urquinaona2.jpg'
+import background4 from './png/projects/urquinaona3.jpg'
 
 import urquinaona1 from './png/projects/urquinaona1.jpg'
 import urquinaona2 from './png/projects/urquinaona2.jpg'
@@ -12,7 +15,12 @@ const assets = {
     png: {
         logo: logo,
         quinta: quinta,
-        background: background,
+        background: [
+            background1,
+            background2,
+            background3,
+            background4
+        ],
         projects: {
             urquinaona: {
                 urquinaona1: urquinaona1,
