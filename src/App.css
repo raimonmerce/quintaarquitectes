@@ -124,3 +124,17 @@ h3 {
         transform: scale(0.25) translate(0, 0);
     }
 }
+
+.button-default {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-m);
+    font-style: bold;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+.button-default:hover {
+    color: var(--color-hover);
+}

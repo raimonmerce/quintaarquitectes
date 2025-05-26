@@ -13,7 +13,7 @@ export default function Header() {
 
     useEffect(() => {
         const path = location.pathname.toLowerCase();
-        const segments = path.split('/').filter(Boolean); // removes empty strings
+        const segments = path.split('/').filter(Boolean);
         if (path.includes("/contact")) {
             setPage("contact");
             setProject(null);
@@ -22,7 +22,6 @@ export default function Header() {
             setProject(null);
         } else if (path === "/quintaarquitectes/projects") {
             setPage("project");
-            setProject(null);
         } else if (segments[1] === "projects" && segments.length > 2) {
             setPage("none");
             setProject(segments[2]);
