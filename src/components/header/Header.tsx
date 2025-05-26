@@ -34,11 +34,7 @@ export default function Header() {
 
     return (
         <div className="header">
-            {landingVisible ?
-                    <div className="header-logo"/>
-                :
-                    <img src={assets.png.quinta} alt="logo" className="header-logo"/>
-            }
+            <img src={assets.png.quinta} alt="logo" className={`header-logo ${landingVisible ? '' : 'visible'}`}/>
             <div className="header-nav">
                 <Link to="/quintaarquitectes/projects" className={`nav-button ${page === "project" ? "selected" : ""}`} onClick={() => setPage('project')}>{t('project')}</Link>
                 <Link to="/quintaarquitectes/contact" className={`nav-button ${page === "contact" ? "selected" : ""}`} onClick={() => setPage('contact')}>{t('contact')}</Link>

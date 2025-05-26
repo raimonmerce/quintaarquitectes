@@ -20,16 +20,9 @@
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-a {
-  text-decoration: inherit;
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 h1 {
@@ -56,12 +49,9 @@ h3 {
 .layout {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-width: 100vw;
 }
 
 .main-content {
-    flex: 1;
     padding: 1em;
     transition: opacity 1s ease;
     opacity: 0;
@@ -73,8 +63,8 @@ h3 {
 
 .landing-container {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     transition: all 2.5s ease;
 }
@@ -101,7 +91,7 @@ h3 {
 
 .landing-logo {
     z-index: 1000;
-    height: 12em;
+    height: 6em;
 }
 
 .landing-backgrounds.move-image{
@@ -110,11 +100,24 @@ h3 {
 
 .landing-container.move-image .landing-logo {
     position: absolute;
-    top: calc(-4em + 8px);
-    left: calc(-9.7em + 16px);
-    transform: scale(0.25) translate(0, 0);
+    top: calc(-1em + 8px);
+    left: calc(-3.2em + 16px);;
+    transform: scale(0.5) translate(0, 0);
 }
 
 .landing-container.move-image p {
     display: none;
+}
+
+@media (min-width: 600px) {
+    .landing-logo {
+        height: 12em;
+    }
+
+    .landing-container.move-image .landing-logo {
+        position: absolute;
+        top: calc(-4em + 8px);
+        left: calc(-9.7em + 16px);
+        transform: scale(0.25) translate(0, 0);
+    }
 }

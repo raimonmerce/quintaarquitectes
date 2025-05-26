@@ -1,5 +1,4 @@
 import Header from "./header/Header"
-import Footer from "./footer/Footer"
 import About from "./content/About"
 import Landing from "./content/Landing"
 import Contact from "./content/Contact"
@@ -9,6 +8,7 @@ import useStore from '../store';
 import { fadeDuration } from "../constant"
 import type { PageType } from "../types"
 import { useState, useEffect } from 'react';
+import Footer from "./footer/Footer"
 
 export default function Main() {
     const [displayedPage, setDisplayedPage] = useState<PageType | null>();
@@ -18,6 +18,14 @@ export default function Main() {
     useEffect(() => {
         setContentVisible(true)
     }, []);
+
+    useEffect(() => {
+        if (landingVisible) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }, [landingVisible]);
 
     useEffect(() => {
         if (page !== displayedPage) {

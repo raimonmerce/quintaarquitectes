@@ -1,6 +1,23 @@
 .project-grid {
-    color: red;
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr;
     gap: var(--space-s);
+}
+
+@media (min-width: 600px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

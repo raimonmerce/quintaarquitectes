@@ -1,17 +1,17 @@
-a {
-    color: var(--color-text)
-}
-
 .footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;  
+    text-align: center;
+    background-color: var(--color-background);
+    padding: 1em;
+    font-size: var(--font-size-m); /* Optional: keep typography consistent */
+    color: var(--color-text);
 }
 
 .footer-link {
     transition: color 0.3s ease;
+    text-decoration: none;
+    color: var(--color-text);
 }
 
 .footer-link:hover {
-    color: var(--color-hover)
+    color: var(--color-hover);
 }

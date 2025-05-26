@@ -1,9 +1,4 @@
-
-type ContactProps = {
-    
-}
-
-export default function Contact({}:ContactProps) {
+export default function Contact() {
     return (
         <>
             <p>Contact</p>

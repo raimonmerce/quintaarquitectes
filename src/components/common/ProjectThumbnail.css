@@ -7,7 +7,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden; 
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .filter {
@@ -27,14 +28,18 @@
     position: absolute;
     height: 25%;
     width: 100%;
-    opacity: 0;
+    opacity: 0.9;
     transition: .5s ease;
     transform: translateY(400%);
     background-color: var(--color-background);
     color: var(--color-text);
+    font-size: var(--font-size-l);
+    padding-inline: var(--space-s);
+
+    display: flex;
+    align-items: center; 
 }
 
 .hoverede {
-    opacity: 0.9;
     transform: translateY(300%);
 }

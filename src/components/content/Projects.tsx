@@ -5,7 +5,7 @@ import "./Projects.css"
 export default function Projects() {
     const projectManager = ProjectManager.getInstance();
     return (
-        <div className={""}>
+        <>
             <p>Projects</p>
             <div className="project-grid">
                 {(() => {
@@ -19,6 +19,6 @@ export default function Projects() {
                     })
                 })()}
             </div>
-        </div>
+        </>
     )
 }

@@ -5,6 +5,7 @@
     cursor: pointer;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
     font-size: var(--font-size-l);
+    text-decoration: none;
 }
 
 .nav-button:hover {
@@ -36,11 +37,17 @@
 .header-logo {
     height: 3em;
     object-fit: contain;
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1.0;
 }
 
 .header-nav {
     display: flex;
     align-items: center;
+    padding-left: 1em;
     gap: 1em;
 }
 
