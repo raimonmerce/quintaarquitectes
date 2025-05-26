@@ -11,6 +11,12 @@
     --font-size-xl: 2.618em;
     --font-size-xll: 4.236em;
 
+    --space-xl: 128px;
+    --space-l: 64px;
+    --space-m: 32px;
+    --space-s: 16px;
+    --space-xs: 8px;
+
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 

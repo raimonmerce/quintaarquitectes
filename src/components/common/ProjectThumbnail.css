@@ -1,0 +1,40 @@
+.container {
+    position: relative;
+    display: flex;
+    height: 300px;
+    width: auto;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; 
+}
+
+.filter {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+}
+
+.filter:hover {
+  opacity: 0.2;
+}
+
+
+.overlay {
+    position: absolute;
+    height: 25%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    transform: translateY(400%);
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.hoverede {
+    opacity: 0.9;
+    transform: translateY(300%);
+}

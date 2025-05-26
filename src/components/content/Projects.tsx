@@ -1,12 +1,13 @@
 import { ProjectManager } from "../../data/ProjectManager"
 import ProjectThumbnail from "../common/ProjectThumbnail";
+import "./Projects.css"
 
 export default function Projects() {
     const projectManager = ProjectManager.getInstance();
     return (
         <div className={""}>
             <p>Projects</p>
-            <div className={""}>
+            <div className="project-grid">
                 {(() => {
                     const projects = projectManager.getAllIDs();
                     return projects.map((item, num) => {

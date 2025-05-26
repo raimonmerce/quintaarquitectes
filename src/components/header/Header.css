@@ -3,7 +3,7 @@
     background-color: transparent;
     color: var(--color-text);
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
     font-size: var(--font-size-l);
 }
 
@@ -17,7 +17,8 @@
 
 .nav-button.selected {
     color: var(--color-text);
-    font-weight: bold;
+    transform: scale(1.05);
+    text-shadow: 0 0 1px currentColor;
 }
 
 .header {

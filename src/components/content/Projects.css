@@ -1,0 +1,6 @@
+.project-grid {
+    color: red;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: var(--space-s);
+}
