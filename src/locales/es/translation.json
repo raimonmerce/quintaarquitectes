@@ -6,6 +6,37 @@
     "footer": {
         "madeby": "Web hecha por",
         "rights": "Todos los derechos reservados."
+    },
+    "projects" : {
+        "urquinaona1" : {
+            "name" : "Urquinaona 1",
+            "location" : "Location",
+            "description" : "Description bla bla bla"
+        },
+        "urquinaona2" : {
+            "name" : "Urquinaona 2",
+            "location" : "Location",
+            "description" : "Description bla bla bla"
+        },
+        "urquinaona3" : {
+            "name" : "Urquinaona 3",
+            "location" : "Location",
+            "description" : "Description bla bla bla"
+        },
+        "urquinaona4" : {
+            "name" : "Urquinaona 4",
+            "location" : "Location",
+            "description" : "Description bla bla bla"
+        },
+        "urquinaona5" : {
+            "name" : "Urquinaona 5",
+            "location" : "Location",
+            "description" : "Description bla bla bla"
+        },
+        "urquinaona6" : {
+            "name" : "Urquinaona 6",
+            "location" : "Location",
+            "description" : "Description bla bla bla"
+        }
     }
-
 }

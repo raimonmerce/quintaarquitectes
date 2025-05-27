@@ -2,6 +2,7 @@ import type { Project } from "../../types";
 import { useNavigate } from 'react-router-dom';
 import useStore from '../../store';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import "./ProjectThumbnail.css"
 
 type ProjectThumbnailProps = {
@@ -12,6 +13,7 @@ export default function ProjectThumbnail({project}: ProjectThumbnailProps) {
     const { setPage, setProject } = useStore();
     const navigate = useNavigate();
     const [isHover, setIsHover] = useState(false);
+    const { t } = useTranslation();
     if (!project) return;
 
     const handleClick = (project: Project) => {
@@ -30,7 +32,7 @@ export default function ProjectThumbnail({project}: ProjectThumbnailProps) {
         >
             <div className="filter"/>
             <div className={`overlay ${isHover ? 'hoverede' : ''}`}>
-                {project.name}
+                {t(project.name)}
             </div>
         </div>
     )

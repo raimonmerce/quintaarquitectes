@@ -20,12 +20,12 @@ export default function Project({id}: ProjectProps) {
     return (
         <div className={""}>
             <button className="button-default" onClick={handleClick}>{t('back')}</button>
-            <h1>{project.name}</h1>
-            <h2>{project.location}</h2>
+            <h1>{t(project.name)}</h1>
+            <h2>{t(project.location)}</h2>
             <h2>{project.date}</h2>
             <h2>{project.type}</h2>
             <h2>{project.state}</h2>
-            <p>{project.description}</p>
+            <p>{t(project.description)}</p>
             <img src={project.thumbnail} alt="logo" className="header-logo"/>
         </div>
     )

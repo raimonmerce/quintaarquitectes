@@ -5,11 +5,11 @@
     --color-background: #F4F1EE;
     --color-hover: #949494;
     
-    --font-size-s: 0.618em;
-    --font-size-m: 1em;
-    --font-size-l: 1.618em;
-    --font-size-xl: 2.618em;
-    --font-size-xll: 4.236em;
+    --font-size-s: 0.5em;
+    --font-size-m: 1.0em;
+    --font-size-l: 1.5em;
+    --font-size-xl: 2.0m;
+    --font-size-xll: 2.5em;
 
     --space-xl: 128px;
     --space-l: 64px;
@@ -47,8 +47,6 @@ h3 {
 }
 
 .layout {
-    display: flex;
-    flex-direction: column;
 }
 
 .main-content {
