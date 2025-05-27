@@ -19,7 +19,7 @@
   background-color: black;
 }
 
-.filter:hover {
+.filter.hoverede {
   opacity: 0.2;
 }
 
@@ -40,6 +40,6 @@
     align-items: center; 
 }
 
-.hoverede {
+.overlay.hoverede {
     transform: translateY(300%);
 }

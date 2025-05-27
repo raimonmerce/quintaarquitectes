@@ -7,6 +7,8 @@ interface Store {
   setProject: (project: string | null) => void;
   landingVisible: boolean;
   setLandingVisible: (landingVisible: boolean) => void;
+  isMobile: boolean;
+  setIsMobile: (isMobile: boolean) => void;
 }
 
 const useStore = create<Store>((set) => ({
@@ -16,6 +18,8 @@ const useStore = create<Store>((set) => ({
   setProject: (project) => set(() => ({ project })),
   landingVisible: true,
   setLandingVisible: (landingVisible) => set(() => ({ landingVisible })),
+  isMobile: window.innerWidth < 600,
+  setIsMobile: (isMobile) => set(() => ({ isMobile })),
 }));
 
 export default useStore;

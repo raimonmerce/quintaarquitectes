@@ -13,10 +13,13 @@ import Footer from "./footer/Footer"
 export default function Main() {
     const [displayedPage, setDisplayedPage] = useState<PageType | null>();
     const [contentVisible, setContentVisible] = useState<boolean>(false);
-    const { page, project, landingVisible } = useStore();
+    const { page, project, landingVisible, setIsMobile } = useStore();
 
     useEffect(() => {
         setContentVisible(true)
+        const handleResize = () => setIsMobile(window.innerWidth < 600);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     useEffect(() => {

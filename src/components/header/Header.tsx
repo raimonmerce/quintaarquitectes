@@ -8,17 +8,10 @@ import './Header.css';
 import { useEffect, useState  } from "react"
 
 export default function Header() {
-    const { page, setPage, setProject, landingVisible } = useStore();
+    const { page, setPage, setProject, landingVisible, isMobile } = useStore();
     const { t } = useTranslation();
     const location = useLocation();
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
     const [extend, setExtend] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < 600);
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     useEffect(() => {
         const path = location.pathname.toLowerCase();
