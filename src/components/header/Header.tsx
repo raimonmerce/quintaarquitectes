@@ -3,13 +3,22 @@ import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
 import assets from "../../assets/assets"
 import { useLocation , Link } from 'react-router-dom';
+import type { PageType } from "../../types"
 import './Header.css';
-import { useEffect } from "react"
+import { useEffect, useState  } from "react"
 
 export default function Header() {
     const { page, setPage, setProject, landingVisible } = useStore();
     const { t } = useTranslation();
     const location = useLocation();
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+    const [extend, setExtend] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 600);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useEffect(() => {
         const path = location.pathname.toLowerCase();
@@ -31,15 +40,45 @@ export default function Header() {
         }
     }, [location.pathname, setPage, setProject]);
 
+    const handleClick = () => {
+        setExtend(!extend)
+    };
+
+    const setPageExtended = (key: PageType) => {
+        setExtend(false)
+        setPage(key)
+    };
+
     return (
-        <div className="header">
-            <img src={assets.png.quinta} alt="logo" className={`header-logo ${landingVisible ? '' : 'visible'}`}/>
-            <div className="header-nav">
-                <Link to="/quintaarquitectes/projects" className={`nav-button ${page === "project" ? "selected" : ""}`} onClick={() => setPage('project')}>{t('project')}</Link>
-                <Link to="/quintaarquitectes/contact" className={`nav-button ${page === "contact" ? "selected" : ""}`} onClick={() => setPage('contact')}>{t('contact')}</Link>
-                <Link to="/quintaarquitectes/about" className={`nav-button ${page === "about" ? "selected" : ""}`} onClick={() => setPage('about')}>{t('about')}</Link>
-                <LanguageSelector />
+        <>
+            <div className="header-container">
+                <div className="header-content">
+                <img src={assets.png.quinta} alt="logo" className={`header-logo ${landingVisible ? '' : 'visible'}`}/>
+                {isMobile ? (
+                        <button className="button-default" onClick={handleClick}>
+                            {t('menu')}
+                        </button>
+                ) : (
+                    <div className="header-nav">
+                        <Link to="/quintaarquitectes/projects" className={`nav-button ${page === "project" ? "selected" : ""}`} onClick={() => setPageExtended('project')}>{t('project')}</Link>
+                        <Link to="/quintaarquitectes/contact" className={`nav-button ${page === "contact" ? "selected" : ""}`} onClick={() => setPageExtended('contact')}>{t('contact')}</Link>
+                        <Link to="/quintaarquitectes/about" className={`nav-button ${page === "about" ? "selected" : ""}`} onClick={() => setPageExtended('about')}>{t('about')}</Link>
+                        <LanguageSelector />
+                    </div>
+                )}
+                </div>
+                {isMobile && 
+                    <div className={`header-extender ${extend ? 'extend' : ''}`}>
+                        <div className={`header-nav-mobile ${extend ? 'fade-in' : 'fade-out'}`}>
+                            <Link to="/quintaarquitectes/projects" className={`nav-button ${page === "project" ? "selected" : ""}`} onClick={() => setPageExtended('project')}>{t('project')}</Link>
+                            <Link to="/quintaarquitectes/contact" className={`nav-button ${page === "contact" ? "selected" : ""}`} onClick={() => setPageExtended('contact')}>{t('contact')}</Link>
+                            <Link to="/quintaarquitectes/about" className={`nav-button ${page === "about" ? "selected" : ""}`} onClick={() => setPageExtended('about')}>{t('about')}</Link>
+                            <LanguageSelector />
+                        </div>
+                    </div>
+                }
             </div>
-        </div>
+
+        </>
     )
 }

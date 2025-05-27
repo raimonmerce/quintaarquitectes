@@ -4,8 +4,31 @@
     color: var(--color-text);
     cursor: pointer;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
-    font-size: var(--font-size-m);
     text-decoration: none;
+}
+
+.header-nav-mobile {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    gap: 2em;
+    opacity: 0;
+}
+
+.header-nav-mobile.fade-in {
+    opacity: 1;
+    transition: opacity 0.7s ease-in 0.8s;
+}
+
+.header-nav-mobile.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out 0s;
+}
+
+.nav-button {
+    font-size: var(--font-size-l);
 }
 
 .nav-button:hover {
@@ -22,15 +45,11 @@
     text-shadow: 0 0 1px currentColor;
 }
 
-.header {
+.header-container {
     position: sticky;
     top: 0;
     z-index: 100;
     background-color: var(--color-background);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em 1em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -38,6 +57,26 @@
     height: 3em;
     object-fit: contain;
     opacity: 0;
+}
+
+.header-content {
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 1em;
+}
+
+.header-extender {
+    height: 0vh;
+    background-color: var(--color-background);
+    transition: height 1.0s ease;
+}
+
+.header-extender.extend {
+    height: 100vh;
 }
 
 .visible {
@@ -71,10 +110,4 @@
 .language-selector option {
     background-color: var(--color-background);
     color: var(--color-text);
-}
-
-@media (min-width: 600px) {
-    .nav-button {
-        font-size: var(--font-size-l);
-    }
 }

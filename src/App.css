@@ -47,6 +47,8 @@ h3 {
 }
 
 .layout {
+    display: flex;
+    flex-direction: column;
 }
 
 .main-content {
@@ -71,7 +73,7 @@ h3 {
     z-index: 500;
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     transition: opacity 2.5s ease;
     opacity: 1;
@@ -102,7 +104,7 @@ h3 {
 .landing-container.move-image .landing-logo {
     position: absolute;
     top: calc(-1em + 8px);
-    left: calc(-3.2em + 16px);;
+    left: calc(-3.2em + 15.5px);;
     transform: scale(0.5) translate(0, 0);
 }
 
