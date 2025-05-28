@@ -19,7 +19,8 @@
         "message": "Mensaje",
         "messageHere": "Mensaje aquí",
         "submit": "Enviar",
-        "messageSubmited": "Mensaje enviado"
+        "messageSubmited": "Mensaje enviado!",
+        "errorSubmited": "Error al enviar mensaje"
     },
     "projects" : {
         "urquinaona1" : {

@@ -9,15 +9,15 @@ const TextSpecial = ({ text }: TextSpecialProps) => {
   const lastChar = text.slice(-1);
 
   return (
-    <div>
+    <div style={{position: "relative"}}>
       {mainText}
       <span
         style={{
-          fontSize: '0.7em',
+          fontSize: '0.8em',
           textDecoration: 'underline',
           display: 'inline-block',
           position: 'absolute',
-          top: '-0.3em'
+          top: '-0.4em'
         }}
       >
         {lastChar}

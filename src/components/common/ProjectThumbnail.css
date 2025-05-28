@@ -30,7 +30,7 @@
     opacity: 0.9;
     transition: .5s ease;
     transform: translateY(400%);
-    background-color: var(--color-background);
+    background-color: var(--color-primary);
     color: var(--color-text);
     font-size: var(--font-size-l);
     padding-inline: var(--space-s);

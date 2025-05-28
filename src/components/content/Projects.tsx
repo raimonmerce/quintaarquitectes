@@ -1,12 +1,15 @@
 import { ProjectManager } from "../../data/ProjectManager"
 import ProjectThumbnail from "../common/ProjectThumbnail";
+import TextSpecial from "../common/TextSpecial";
+import { useTranslation } from 'react-i18next'
 import "./Projects.css"
 
 export default function Projects() {
     const projectManager = ProjectManager.getInstance();
+    const { t } = useTranslation();
     return (
         <>
-            <p>Projects</p>
+            <h2 style={{margin: "0.5em"}}><TextSpecial text={t('header.project')}/></h2>
             <div className="project-grid">
                 {(() => {
                     const projects = projectManager.getAllIDs();

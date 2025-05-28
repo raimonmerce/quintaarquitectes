@@ -23,12 +23,8 @@
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 .form-input {
-    background-color: var(--color-background);
+    background-color: var(--color-primary);
     color: var(--color-text);
     border: none;
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -51,20 +47,55 @@
 }
 
 .submit-button {
+    position: absolute;
     background-color: var(--color-text);
-    color: var(--color-background);
+    color: var(--color-primary);
     border: none;
     padding: 1em;
     width: 100%;
-    margin-top: 1em;
+    transform: translateX(0);
+    transition: transform 1s ease, color 0.5s ease;
+    cursor: pointer;
+    font-size: var(--font-size-m);
 }
 
+.submit-button:hover {
+    color: var(--color-hover);
+}
+
+.submit-button.submited {
+    transform: translateX(100%);
+    cursor: auto;
+}
+
+
 .submit-message {
-    
+    position: absolute;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border: none;
+    padding: 1em;
+    width: 100%;
+    transform: translateX(-100%);
+    opacity: 0.0;
+    transition: transform 1s ease, opacity 2s ease;
+}
+
+.submit-message.submited {
+    transform: translateX(0%);
+    opacity: 1.0;
+}
+
+.submit-message.error {
+    color: var(--color-error);
 }
 
 @media (min-width: 600px) {
     .contact-continer {
         flex-direction: row;
     }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }

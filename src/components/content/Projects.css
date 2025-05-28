@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-s);
+    margin-top: 1em;
 }
 
 @media (min-width: 600px) {

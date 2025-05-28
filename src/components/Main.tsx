@@ -55,7 +55,7 @@ export default function Main() {
                     {displayedPage === "about" && <About/>}
                     {displayedPage === "none" && project && <Project id={project}/>}
                 </div>
-                {/* <Footer/> */}
+                <Footer/>
             </>
         </div>
     )

@@ -50,7 +50,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: var(--color-background);
+    background-color: var(--color-primary);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -63,16 +63,17 @@
 .header-content {
     top: 0;
     z-index: 100;
-    background-color: var(--color-background);
+    background-color: var(--color-primary);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1em 1em;
+    height: 15svh;
 }
 
 .header-extender {
     height: 0vh;
-    background-color: var(--color-background);
+    background-color: var(--color-primary);
     transition: height 1.0s ease;
 }
 
@@ -109,6 +110,71 @@
 }
 
 .language-selector option {
-    background-color: var(--color-background);
+    background-color: var(--color-primary);
     color: var(--color-text);
+}
+
+
+.hamburger {
+  display: inline-block;
+  height: 4em;
+  margin-right: 1em;
+  position: relative;
+  
+  a.main-nav-toggle {
+    display: block;
+    width: 28px;
+    height: 1em;
+    left: -2em;
+    position: absolute;
+    top: 25px;
+    
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 0;
+      border-bottom: 4px solid var(--color-text);
+      width: 100%;
+      left: 0;
+      right: 0;
+      transition: all ease-out 0.3s;
+    }
+    
+    &:after {
+      top: 100%;
+    }
+
+    i {
+      display: block;
+      text-indent: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      height: 4px;
+      background-color: var(--color-text);
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transition: all ease-out 0.1s;
+    }
+    
+    &.active-menu {
+      &:after {
+        transform: rotate(-45deg);
+        transform-origin: center;
+        top: 50%;
+      }
+      
+      &:before {
+        transform: rotate(45deg);
+        transform-origin: center;
+        top: 50%
+      }
+      
+      i {
+        opacity: 0;
+      }
+    }
+  }
 }

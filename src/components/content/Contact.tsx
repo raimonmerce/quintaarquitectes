@@ -4,6 +4,7 @@ import type { ChangeEvent, FormEvent } from "react";
 import ButtonDefault from "../common/ButtonDefault";
 import assets from "../../assets/assets";
 import { useTranslation } from 'react-i18next';
+import TextSpecial from "../common/TextSpecial";
 import "./Contact.css";
 
 export default function Contact() {
@@ -15,7 +16,8 @@ export default function Contact() {
         message: "",
     });
 
-    const [status, setStatus] = useState("");
+    const [status, setStatus] = useState<string | null>(null);
+    const [statusText, setStatusText] = useState(" ");
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -33,11 +35,13 @@ export default function Contact() {
         )
         .then(
             () => {
-            setStatus("Email sent successfully!");
+            setStatusText(t("contact.messageSubmited"));
+            setStatus("success")
             setFormData({ name: "", email: "", message: "" });
             },
             (error) => {
-            setStatus("Failed to send email.");
+            setStatusText(t("contact.errorSubmited"));
+            setStatus("error")
             console.error(error);
             }
         );
@@ -59,7 +63,7 @@ export default function Contact() {
 
     return (
         <>
-            <p>Contact</p>
+            <h2 style={{margin: "0.5em"}}><TextSpecial text={t('header.contact')}/></h2>
             <div className="contact-continer">
                 <div className="contact-continer-links">
                     <div style={{display: "flex", width: "100%"}}>
@@ -125,10 +129,14 @@ export default function Contact() {
                             required
                             className="form-input form-text"
                         />
-                        <button type="submit" className="submit-button">
-                            {t("contact.submit")}
-                        </button>
-                        {status && <p className="status-message">{status}</p>}
+                        <div style={{overflow: "hidden", position: "relative", height: "3em"}}>
+                            <button type="submit" className={`submit-button ${status ? 'submited' : ''}`}>
+                                {t("contact.submit")}
+                            </button>
+                            <div className={`submit-message ${status ? 'submited' : ''} ${status === 'error' ? 'error' : ''}`}>
+                                {statusText}
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

@@ -1,9 +1,10 @@
 .footer-container {
     text-align: center;
-    background-color: var(--color-background);
+    background-color: var(--color-primary);
     padding: 1em;
     font-size: var(--font-size-m); /* Optional: keep typography consistent */
     color: var(--color-text);
+    height: 10svh;
 }
 
 .footer-link {

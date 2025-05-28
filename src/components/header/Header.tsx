@@ -7,6 +7,7 @@ import type { PageType } from "../../types"
 import './Header.css';
 import { useEffect, useState  } from "react"
 import TextSpecial from '../common/TextSpecial';
+// import ButtonDefault from '../common/ButtonDefault';
 
 export default function Header() {
     const { page, setPage, setProject, landingVisible, isMobile } = useStore();
@@ -49,9 +50,18 @@ export default function Header() {
                 <div className="header-content">
                 <img src={assets.png.quinta} alt="logo" className={`header-logo ${landingVisible ? '' : 'visible'}`}/>
                 {isMobile ? (
-                        <button className="button-default" onClick={handleClick}>
-                            {t('menu')}
-                        </button>
+                    // <ButtonDefault
+                    //     onClick={handleClick}
+                    //     svgPath={assets.svg.menuSVG}
+                    // />
+                    <div className="hamburger">
+                        <a 
+                            className={`main-nav-toggle ${extend ? "active-menu" : ""}`}
+                            onClick={handleClick}
+                        >
+                            <i>Menu</i>
+                        </a>
+                    </div>
                 ) : (
                     <div className="header-nav">
                         <Link to="/quintaarquitectes/projects" className={`nav-button ${page === "project" ? "selected" : ""}`} onClick={() => setPageExtended('project')}><TextSpecial text={t('header.project')}/></Link>
