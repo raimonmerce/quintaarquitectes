@@ -5,6 +5,7 @@
     cursor: pointer;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
     text-decoration: none;
+    transform: scale(1.0);
 }
 
 .header-nav-mobile {
@@ -19,7 +20,7 @@
 
 .header-nav-mobile.fade-in {
     opacity: 1;
-    transition: opacity 0.7s ease-in 0.8s;
+    transition: opacity 0.5s ease-in 0.5s;
 }
 
 .header-nav-mobile.fade-out {
@@ -87,7 +88,7 @@
     display: flex;
     align-items: center;
     padding-left: 1em;
-    gap: 1em;
+    gap: 2em;
 }
 
 .language-selector {

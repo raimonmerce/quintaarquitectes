@@ -6,6 +6,7 @@ import { useLocation , Link } from 'react-router-dom';
 import type { PageType } from "../../types"
 import './Header.css';
 import { useEffect, useState  } from "react"
+import TextSpecial from '../common/TextSpecial';
 
 export default function Header() {
     const { page, setPage, setProject, landingVisible, isMobile } = useStore();
@@ -53,9 +54,9 @@ export default function Header() {
                         </button>
                 ) : (
                     <div className="header-nav">
-                        <Link to="/quintaarquitectes/projects" className={`nav-button ${page === "project" ? "selected" : ""}`} onClick={() => setPageExtended('project')}>{t('project')}</Link>
-                        <Link to="/quintaarquitectes/contact" className={`nav-button ${page === "contact" ? "selected" : ""}`} onClick={() => setPageExtended('contact')}>{t('contact')}</Link>
-                        <Link to="/quintaarquitectes/about" className={`nav-button ${page === "about" ? "selected" : ""}`} onClick={() => setPageExtended('about')}>{t('about')}</Link>
+                        <Link to="/quintaarquitectes/projects" className={`nav-button ${page === "project" ? "selected" : ""}`} onClick={() => setPageExtended('project')}><TextSpecial text={t('header.project')}/></Link>
+                        <Link to="/quintaarquitectes/contact" className={`nav-button ${page === "contact" ? "selected" : ""}`} onClick={() => setPageExtended('contact')}><TextSpecial text={t('header.contact')}/></Link>
+                        <Link to="/quintaarquitectes/about" className={`nav-button ${page === "about" ? "selected" : ""}`} onClick={() => setPageExtended('about')}><TextSpecial text={t('header.about')}/></Link>
                         <LanguageSelector />
                     </div>
                 )}
@@ -63,9 +64,9 @@ export default function Header() {
                 {isMobile && 
                     <div className={`header-extender ${extend ? 'extend' : ''}`}>
                         <div className={`header-nav-mobile ${extend ? 'fade-in' : 'fade-out'}`}>
-                            <Link to="/quintaarquitectes/projects" className={`nav-button ${page === "project" ? "selected" : ""}`} onClick={() => setPageExtended('project')}>{t('project')}</Link>
-                            <Link to="/quintaarquitectes/contact" className={`nav-button ${page === "contact" ? "selected" : ""}`} onClick={() => setPageExtended('contact')}>{t('contact')}</Link>
-                            <Link to="/quintaarquitectes/about" className={`nav-button ${page === "about" ? "selected" : ""}`} onClick={() => setPageExtended('about')}>{t('about')}</Link>
+                            <Link to="/quintaarquitectes/projects" className={`nav-button ${page === "project" ? "selected" : ""}`} onClick={() => setPageExtended('project')}>{<TextSpecial text={t('header.project')}/>}</Link>
+                            <Link to="/quintaarquitectes/contact" className={`nav-button ${page === "contact" ? "selected" : ""}`} onClick={() => setPageExtended('contact')}>{<TextSpecial text={t('header.contact')}/>}</Link>
+                            <Link to="/quintaarquitectes/about" className={`nav-button ${page === "about" ? "selected" : ""}`} onClick={() => setPageExtended('about')}>{<TextSpecial text={t('header.about')}/>}</Link>
                             <LanguageSelector />
                         </div>
                     </div>

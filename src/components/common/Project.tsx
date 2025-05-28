@@ -1,6 +1,8 @@
 import { ProjectManager } from "../../data/ProjectManager"
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import ButtonDefault from "../common/ButtonDefault";
+import assets from "../../assets/assets";
 
 type ProjectProps = {
     id: string;
@@ -19,7 +21,11 @@ export default function Project({id}: ProjectProps) {
 
     return (
         <div className={""}>
-            <button className="button-default" onClick={handleClick}>{t('back')}</button>
+            <ButtonDefault
+                onClick={handleClick}
+                svgPath={assets.svg.backSVG}
+                text={t('back')}
+            />
             <h1>{t(project.name)}</h1>
             <h2>{t(project.location)}</h2>
             <h2>{project.date}</h2>

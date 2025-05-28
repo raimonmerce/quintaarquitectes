@@ -1,12 +1,25 @@
 {
-    "project": "Projects",
-    "contact": "Contact",
-    "about": "About us",
-    "back": "< Back",
-    "menu": "Menu",
+    "header": {
+        "project": "Projects",
+        "contact": "Contact",
+        "about": "About us",
+        "back": "Back",
+        "menu": "Menu"
+    },
     "footer": {
         "madeby": "Website made by",
         "rights": "All rights reserved."
+    },
+    "contact": {
+        "location": "Location",
+        "name": "Name",
+        "nameHere": "Name here",
+        "email": "Email",
+        "emailHere": "Email Here",
+        "message": "Message",
+        "messageHere": "Message Here",
+        "submit": "Submit",
+        "messageSubmited": "Message sended!"
     },
     "projects" : {
         "urquinaona1" : {

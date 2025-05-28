@@ -1,0 +1,10 @@
+.icon-image {
+  transition: all 0.2s ease;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.icon-image.hovered {
+  filter: brightness(0) saturate(100%) invert(40%);
+  transform: scale(1.1);
+}

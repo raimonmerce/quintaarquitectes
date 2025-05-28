@@ -1,3 +1,4 @@
+//PNG
 import logo from './png/logo.png'
 import quinta from './png/quinta.png'
 import background1 from './png/background.png'
@@ -10,6 +11,13 @@ import urquinaona2 from './png/projects/urquinaona2.jpg'
 import urquinaona3 from './png/projects/urquinaona3.jpg'
 import urquinaona4 from './png/projects/urquinaona4.jpg'
 import urquinaona5 from './png/projects/urquinaona5.jpg'
+
+//SVG
+import backSVG from './svg/back.svg'
+import emailSVG from './svg/email.svg'
+import linkedinSVG from './svg/linkedin.svg'
+import locationSVG from './svg/location.svg'
+import menuSVG from './svg/menu.svg'
 
 const assets = {
     png: {
@@ -30,6 +38,13 @@ const assets = {
                 urquinaona5: urquinaona5
             }
         }
+    },
+    svg: {
+        backSVG: backSVG,
+        emailSVG: emailSVG,
+        linkedinSVG: linkedinSVG,
+        locationSVG: locationSVG,
+        menuSVG: menuSVG
     }
 }
 

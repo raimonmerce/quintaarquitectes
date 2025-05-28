@@ -1,12 +1,25 @@
 {
-    "project": "Projectes",
-    "contact": "Contacte",
-    "about": "Nosaltres",
-    "back": "< Endarrere",
-    "menu": "Menu",
+    "header": {
+        "project": "Projectes",
+        "contact": "Contacte",
+        "about": "Nosaltres",
+        "back": "Endarrere",
+        "menu": "Menu"
+    },
     "footer": {
         "madeby": "Web feta per",
         "rights": "Tots els drets reservats."
+    },
+    "contact": {
+        "location": "Ubicació",
+        "name": "Nom",
+        "nameHere": "Nom aquí",
+        "email": "Correu",
+        "emailHere": "Correu aquí",
+        "message": "Missatge",
+        "messageHere": "Missastge aquí",
+        "submit": "Enviar",
+        "messageSubmited": "Missatge Enviat"
     },
     "projects" : {
         "urquinaona1" : {

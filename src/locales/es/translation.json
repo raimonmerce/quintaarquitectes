@@ -1,12 +1,25 @@
 {
-    "project": "Proyectos",
-    "contact": "Contacto",
-    "about": "Nosaltros",
-    "back": "< Atrás",
-    "menu": "Menu",
+    "header": {
+        "project": "Proyectos",
+        "contact": "Contacto",
+        "about": "Nosaltros",
+        "back": "Atrás",
+        "menu": "Menu"
+    },
     "footer": {
         "madeby": "Web hecha por",
         "rights": "Todos los derechos reservados."
+    },
+    "contact": {
+        "location": "Ubicación",
+        "name": "Nombre",
+        "nameHere": "Nombre aquí",
+        "email": "Correo",
+        "emailHere": "Correo aquí",
+        "message": "Mensaje",
+        "messageHere": "Mensaje aquí",
+        "submit": "Enviar",
+        "messageSubmited": "Mensaje enviado"
     },
     "projects" : {
         "urquinaona1" : {
