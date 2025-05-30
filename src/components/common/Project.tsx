@@ -14,14 +14,16 @@ export default function Project({id}: ProjectProps) {
     const project = projectManager.getById(id);
     const { t } = useTranslation();
     const navigate = useNavigate();
-    if (!project) return;
 
     const handleClick = () => {
         navigate('/quintaarquitectes/projects')
     };
 
+    if (!project) return;
+
     return (
-        <div className={""}>
+        <div className={"project-container"}>
+            <div className={""}>
             <ButtonDefault
                 onClick={handleClick}
                 svgPath={assets.svg.backSVG}
@@ -33,14 +35,13 @@ export default function Project({id}: ProjectProps) {
             <h2>{t("common.type")} {project.type}</h2>
             <h2>{t("common.state")} {project.state}</h2>
             <p>{t(project.description)}</p>
-            <div className="image-gallery">
-                {project.images.map((img: string) => {
-                    console.log("img", img);
-                    return (
-                        <img src={img} alt="img" className=""/>
-                    )
-                })}
             </div>
+            {project.images.map((img: string) => {
+                console.log("img", img);
+                return (
+                    <img src={img} alt="img" className=""/>
+                )
+            })}
         </div>
     )
 }
