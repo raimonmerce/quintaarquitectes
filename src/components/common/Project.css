@@ -1,0 +1,10 @@
+.image-gallery {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (min-width: 600px) {
+    .image-gallery {
+        flex-direction: row;
+    }
+}

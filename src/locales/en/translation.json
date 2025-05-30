@@ -1,4 +1,10 @@
 {
+    "common": {
+        "location": "Location",
+        "date": "Data",
+        "type": "Type",
+        "state": "State"
+    },
     "header": {
         "project": "Projects",
         "contact": "Contact",

@@ -13,11 +13,11 @@ const TextSpecial = ({ text }: TextSpecialProps) => {
       {mainText}
       <span
         style={{
-          fontSize: '0.8em',
+          fontSize: '1em',
           textDecoration: 'underline',
           display: 'inline-block',
           position: 'absolute',
-          top: '-0.4em'
+          top: '-0.65em'
         }}
       >
         {lastChar}

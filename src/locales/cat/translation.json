@@ -1,4 +1,10 @@
 {
+    "common": {
+        "location": "Ubicació",
+        "date": "Data",
+        "type": "Tipus",
+        "state": "Estat"
+    },
     "header": {
         "project": "Projectes",
         "contact": "Contacte",
@@ -11,7 +17,6 @@
         "rights": "Tots els drets reservats."
     },
     "contact": {
-        "location": "Ubicació",
         "name": "Nom",
         "nameHere": "Nom aquí",
         "email": "Correu",

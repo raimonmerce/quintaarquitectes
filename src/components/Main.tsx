@@ -44,7 +44,6 @@ export default function Main() {
     }, [page, displayedPage]);
     return (
         <div className="layout">
-            <>
                 {landingVisible &&
                     <Landing/> 
                 }
@@ -56,7 +55,6 @@ export default function Main() {
                     {displayedPage === "none" && project && <Project id={project}/>}
                 </div>
                 <Footer/>
-            </>
         </div>
     )
 }

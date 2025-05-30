@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ButtonDefault from "../common/ButtonDefault";
 import assets from "../../assets/assets";
+import "./Project.css"
 
 type ProjectProps = {
     id: string;
@@ -24,15 +25,22 @@ export default function Project({id}: ProjectProps) {
             <ButtonDefault
                 onClick={handleClick}
                 svgPath={assets.svg.backSVG}
-                text={t('back')}
+                text={t('header.back')}
             />
             <h1>{t(project.name)}</h1>
-            <h2>{t(project.location)}</h2>
-            <h2>{project.date}</h2>
-            <h2>{project.type}</h2>
-            <h2>{project.state}</h2>
+            <h2>{t("common.location")} {t(project.location)}</h2>
+            <h2>{t("common.date")} {project.date}</h2>
+            <h2>{t("common.type")} {project.type}</h2>
+            <h2>{t("common.state")} {project.state}</h2>
             <p>{t(project.description)}</p>
-            <img src={project.thumbnail} alt="logo" className="header-logo"/>
+            <div className="image-gallery">
+                {project.images.map((img: string) => {
+                    console.log("img", img);
+                    return (
+                        <img src={img} alt="img" className=""/>
+                    )
+                })}
+            </div>
         </div>
     )
 }
