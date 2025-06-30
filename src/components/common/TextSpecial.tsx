@@ -7,6 +7,7 @@ const TextSpecial = ({ text }: TextSpecialProps) => {
 
   const mainText = text.slice(0, -1);
   const lastChar = text.slice(-1);
+  console.log("AAA", mainText, lastChar)
 
   return (
     <div style={{position: "relative"}}>

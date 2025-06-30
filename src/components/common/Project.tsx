@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ButtonDefault from "../common/ButtonDefault";
 import assets from "../../assets/assets";
+import ImageThumbnail from "./ImageThumbnail";
 import "./Project.css"
 
 type ProjectProps = {
@@ -39,7 +40,7 @@ export default function Project({id}: ProjectProps) {
             {project.images.map((img: string) => {
                 console.log("img", img);
                 return (
-                    <img src={img} alt="img" className=""/>
+                    <ImageThumbnail src={img} text="AAA"/>
                 )
             })}
         </div>

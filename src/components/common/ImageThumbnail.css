@@ -1,0 +1,30 @@
+.img-container {
+    position: relative;
+    display: flex;
+    width: auto;
+    overflow: hidden;
+}
+.img-container img{
+    height: 80vh;
+    width: auto;
+}
+
+.overlay {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    opacity: 0.9;
+    transition: .5s ease;
+    transform: translateY(1000%);
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-size: var(--font-size-l);
+    padding-inline: var(--space-s);
+
+    display: flex;
+    align-items: center; 
+}
+
+.overlay.hoverede {
+    transform: translateY(900%);
+}
